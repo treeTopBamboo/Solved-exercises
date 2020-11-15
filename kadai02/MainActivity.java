@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.CheckBox;
 import android.widget.RatingBar;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,11 +20,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        CheckBox checkBox = findViewById(R.id.checkBox);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                CheckBox checkBox = findViewById(R.id.checkBox);
+                TextView textView = findViewById(R.id.textView);
+                textView.setText(String.format(isChecked + "（%s）",checkBox.getText()));
+            }
+        });
+        Switch switch1 = findViewById(R.id.switch1);
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Switch switch1 = findViewById(R.id.switch1);
+                TextView textView = findViewById(R.id.textView);
+                textView.setText(String.format(isChecked + "（%s）",switch1.getText()));
+            }
+        });
+
         RatingBar ratingBar = findViewById(R.id.ratingBar);
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean isChanged) {
                 TextView textView = findViewById(R.id.textView);
-                textView.setText(String.format("RatingBarが切り替わりました。"));
+                textView.setText(String.format(Locale.JAPAN,rating + "（RatingBar）"));
             }
         });
     }
@@ -51,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void btnSend_onCheckedChanged(View view) {
+    /*public void btnSend_onCheckedChanged(View view) {
         TextView textView = findViewById(R.id.textView);
         Switch switch1 = findViewById(R.id.switch1);
         CheckBox checkBox = findViewById(R.id.checkBox);
@@ -66,5 +89,5 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
-    }
+    }*/
 }
