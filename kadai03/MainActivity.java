@@ -10,6 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //オブジェクト一覧
+    Button btn;
+    EditText editTxt;
+    RadioGroup distance;
+    TextView txtV;
+
+    //単位ごとのメートル換算値
     final double INCH = 0.0254;
     final double FEET = 0.3048;
     final double YARD = 0.9144;
@@ -20,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = findViewById(R.id.btn);
+        btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try
-                {
-                    EditText editTxt = findViewById(R.id.editTxt);
+                {   //選択したRadioButton毎に計算して値を表示する
+                    editTxt = findViewById(R.id.editTxt);
                     double etNum = Double.parseDouble(editTxt.getText().toString());
-                    RadioGroup distance = findViewById(R.id.distance);
+                    distance = findViewById(R.id.distance);
                     int rID = distance.getCheckedRadioButtonId();
                     double result = etNum;
                     switch (rID) {
@@ -47,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
                         default:
                             break;
                     };
-                    TextView txtV = findViewById(R.id.txtV);
+                    txtV = findViewById(R.id.txtV);
                     txtV.setText(result + "");
                 }
                 catch (Exception e)
-                {
+                {   //例外処理
                     Toast.makeText(MainActivity.this,"数値を入力してください",Toast.LENGTH_LONG).show();
                 }
             }
