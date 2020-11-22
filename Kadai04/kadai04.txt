@@ -1,0 +1,29 @@
+﻿文字コード：UTF-8
+
+
+「作業課題４」
+二つの画面（Activity）を使用するプログラムの作成
+
+■詳細
+開始画面（MainActivity）と色設定画面（ConfigActivity）の、二つの画面を行き来するプログラム。
+開始画面にて「設定」をタップすると色設定画面に移行する。
+色設定画面で色を指定すると背景色を変更できる。
+背景色の設定は開始画面には適用されないものとする。
+「青色」「赤色」「黄色」をタップで対応した背景色を選択する。
+色を選択したのちに「OK」をタップで適用、「キャンセル」は適用せず開始画面に戻る。
+「デフォルト」は色設定なしの状態である。
+
+
+■手順および要点
+・プログラミング作業
+　１）Activityを二つ（MainActivit、ConfigActivity）作成する。
+　２）MainActivitからConfigActivityを呼び出す処理を記述する。
+　３）色の設定、Activityの終了、データの受け渡し処理を適切に記述する。
+　４）動作確認をしながら進めると効果的である。
+
+■関連知識
+・ConfigActivityを呼び出すには、Intentを使用する。
+　また、データの受け渡しにもIntentを利用する。（Intent#putExtra()）
+・ConfigActivityのデータをMainActivityで受け取るために、Activity#startActivityForResult()を
+　MainActivityで実行し、ConfigActivityを呼び出す。
+　ConfigActivityが終了すると、onActivityResult()がコールバックされる。
