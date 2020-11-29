@@ -1,0 +1,24 @@
+文字コード：UTF-8
+
+
+「作業課題５」
+画面をフラグメントで構成するプログラムの作成
+
+■詳細
+一つのActivityの上で、二つのFragmentを使用する。
+画面左側をMainFragmentとし、「青色」か「デフォルト」をタップすると画面右側にSubFragmentを表示させる。
+タップしたボタンに従い、SubFragmentの背景色を変更する。
+
+■手順および要点
+・プログラミング作業
+　１）Activityを一つ（MainActivity）作成する。
+　２）Fragmentを二つ（MainFragment、SubFragment）を作成する。
+　３）初期状態では、MainActivityの左半分にMainFragmentを配置する。
+　４）「青色」か「デフォルト」をタップするとMainActivityの右半分にSubFragmentを表示させる。
+　５）SubFragment画面の「閉じる」をタップすると、SubFragmentを終了する。
+
+■関連知識
+・コード上でフラグメントを呼び出すには、対象のフラグメント（SubFragment）をインスタンス生成し、
+　FragmentTransactionオブジェクトを使ってアクテビティ上に配置する。
+・フラグメントにデータを受け渡すにはBundleを利用する。
+　Bundleオブジェクトを生成し、Bundle#putString()などでデータを持たせる。
