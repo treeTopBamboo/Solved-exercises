@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <fragment
-        android:id="@+id/MainFragment"
+        android:id="@+id/subFragment"
         android:name="org.example.kadai05.MainFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
