@@ -4,12 +4,18 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/edTime"
+        android:id="@+id/editTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:hint="@string/edTime_hint" />
+        android:hint="@string/editTime_hint" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/timeView_hint" />
 
     <Button
         android:id="@+id/btnStart"
@@ -24,4 +30,5 @@
         android:layout_height="wrap_content"
         android:onClick="onStopClick"
         android:text="@string/btnClose_text" />
+
 </LinearLayout>

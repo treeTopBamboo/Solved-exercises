@@ -1,0 +1,23 @@
+文字コード：UTF-8
+
+
+「作業課題６」
+Serviceを利した通知プログラムの作成
+
+■参考にしたサイト
+質問サイト
+「AndroidでService内で発行したTimerが端末スリープ状態で勝手に止まる」
+https://teratail.com/questions/33079
+
+Qiita
+「AndroidでTimerを使わずHandlerだけでお手軽に定期実行してあげる」
+https://qiita.com/aftercider/items/81edf35993c2df3de353
+
+ブログ
+「[Android] カウントアップするタイマー、ストップウォッチをTimerTaskで作る」
+https://akira-watson.com/android/timertask.html
+
+Java Platform SE 8
+「クラスScheduledThreadPoolExecutor」
+https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html
+
