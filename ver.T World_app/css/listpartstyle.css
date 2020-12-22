@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+.right
+{
+	text-align : right;
+}
+
+.left
+{
+	text-align : left;
+}
+
+.center
+{
+	text-align : center;
+}
+
+.tmargin
+{
+	text-indent : 20px;
+}
+
+th
+{
+	border-bottom-style : double;
+}
+
+th.name
+{
+	width : 300px;
+}
+
+th.district
+{
+	width : 200px;
+}
+
+table
+{
+	margin : 0 auto;
+}

@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+th{border-bottom-style:dashed;width:100px;text-align: center}
+td{width:100px;text-align: center;}
+td.line{border-bottom-style: double;text-align: left;}
+table{margin:0 auto}
